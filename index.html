@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Вгадай число</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <button class="btn btn__reset">Нова гра !</button>
+        <p>Введіть число від 0 до 20</p>
+      </header>
+      <main>
+        <h1>Вгадайте число</h1>
+        <div class="box"><h2 class="question">?</h2></div>
+
+        <div class="block">
+          <div class="game__blok">
+            <p class="message">Введіть задумане число</p>
+            <input type="number" />
+            <button class="btn btn_check">Перевірка</button>
+          </div>
+          <div class="info_game">
+            <p>Кількість спроб: <span class="score"></span></p>
+            <p>Рекорд: <span class="record">0</span></p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

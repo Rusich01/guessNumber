@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(94, 166, 97, 1) 0%,
+    rgba(85, 139, 96, 1) 40%,
+    rgba(87, 130, 139, 1) 100%
+  );
+}
+.container {
+  width: 800px;
+  padding: 15px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header button {
+  border-radius: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  display: flex;
+  justify-content: center;
+}
+.box h2 {
+  border: 2px solid black;
+  padding: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  background: wheat;
+  border-radius: 15px;
+}
+.boxWin {
+  background: #1ee872;
+}
+.boxLost {
+  background: #951600;
+}
+.game__blok {
+  display: flex;
+  flex-direction: column;
+}
+.game__blok input {
+  width: 100px;
+  padding: 15px;
+  padding-left: 20%;
+  background: transparent;
+
+  border: 2px solid black;
+  border-radius: 15px;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+.game__blok button {
+  margin-top: 15px;
+  width: 150px;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
