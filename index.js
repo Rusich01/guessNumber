@@ -8,7 +8,41 @@ document.querySelector(".score").textContent = score;
 
 console.log("Random number:", random);
 
+addEventListener("keydown", (event) => {
+  if (!event.key.toLowerCase() === "enter") return;
+  clickFunction();
+});
+
 document.querySelector(".btn_check").addEventListener("click", () => {
+  clickFunction();
+});
+
+// button reset
+document.querySelector(".btn__reset").addEventListener("click", () => {
+  document.querySelector("body").classList.remove("boxWin");
+  document.querySelector("body").classList.remove("boxLost");
+  displayMassage("Введіть задумане число");
+  question.innerHTML = "?";
+  document.querySelector("input").value = "";
+  random = Math.trunc(Math.random() * 20) + 1;
+  score = 20;
+  document.querySelector(".score").textContent = score;
+  console.log("New random number:", random);
+});
+
+// Функція яка записуе рекорд !
+const funRecords = () => {
+  if (score > record) {
+    record = score;
+    document.querySelector(".record").textContent = record;
+  }
+};
+//   Функція яка виводить текст на головний екран
+const displayMassage = (message) => {
+  document.querySelector(".message").textContent = message;
+};
+
+const clickFunction = () => {
   const guess = +document.querySelector("input").value;
 
   if (!guess) {
@@ -37,29 +71,4 @@ document.querySelector(".btn_check").addEventListener("click", () => {
       document.querySelector("body").classList.add("boxLost");
     }
   }
-});
-
-// button reset
-document.querySelector(".btn__reset").addEventListener("click", () => {
-  document.querySelector("body").classList.remove("boxWin");
-  document.querySelector("body").classList.remove("boxLost");
-  displayMassage("Введіть задумане число");
-  question.innerHTML = "?";
-  document.querySelector("input").value = "";
-  random = Math.trunc(Math.random() * 20) + 1;
-  score = 20;
-  document.querySelector(".score").textContent = score;
-  console.log("New random number:", random);
-});
-
-// Функція яка записуе рекорд !
-const funRecords = () => {
-  if (score > record) {
-    record = score;
-    document.querySelector(".record").textContent = record;
-  }
-};
-//   Функція яка виводить текст на головний екран
-const displayMassage = (message) => {
-  document.querySelector(".message").textContent = message;
 };
